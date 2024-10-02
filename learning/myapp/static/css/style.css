@@ -1,0 +1,217 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to bottom right, #000022, #000044);
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.space-x-6 > *:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.space-x-3 > *:not(:last-child) {
+    margin-right: 0.75rem;
+}
+
+.text-transparent {
+    color: transparent;
+}
+
+.bg-clip-text {
+    background-clip: text;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.rounded-2xl {
+    border-radius: 1rem;
+}
+
+.hover\:opacity-90:hover {
+    opacity: 0.9;
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-xl:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+header {
+    padding: 1.5rem 0;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #CDFF8E;
+}
+
+/* Buttons */
+button {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button.bg-blue {
+    background: linear-gradient(to right, #004AAD, #33838B);
+    color: white;
+}
+
+button.bg-green {
+    background: linear-gradient(to right, #5A9D40, #CDFF8E);
+    color: #000022;
+}
+
+/* Main Section */
+main {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-bg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right, #5A9D40, #33838B);
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+    position: relative;
+}
+
+.circle-inner {
+    position: absolute;
+    inset: 0.25rem;
+    background: #000033;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-inner span {
+    font-size: 4rem;
+    color: #CDFF8E;
+}
+
+.text-jackpot {
+    font-size: 5rem;
+}
+
+.text-jackpot-desc {
+    max-width: 600px;
+    margin-top: 1.5rem;
+    color: #6EB195;
+}
+
+/* Footer */
+footer {
+    padding: 3rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer-card {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom right, #004AAD, #33838B);
+    border-radius: 1rem;
+    transition: box-shadow 0.3s;
+}
+
+.footer-card h3 {
+    color: #CDFF8E;
+    margin-bottom: 1rem;
+}
+
+.footer-card p {
+    color: #CDFF8E;
+    margin-bottom: 1rem;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    background: linear-gradient(to right, #5A9D40, #CDFF8E);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* This is necessary for the background gradient to show through */
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-buttons {
+    margin-left: auto;
+}
+
+.nav-buttons button {
+    padding: 0.75rem 1.5rem;
+    margin-left: 0.5rem;
+}

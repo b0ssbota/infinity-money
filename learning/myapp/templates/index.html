@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="wallet-section">
+    <div class="flex">
+        <!-- Wallet Section Left (Circle and $) -->
+        <div class="wallet-circle">
+            <div class="circle">
+                <span class="dollar-sign">$</span>
+            </div>
+        </div>
+
+        <!-- Wallet Section Right (Wallet Info) -->
+        <div class="wallet-info">
+            <h2>Your Wallet</h2>
+            <h1>$0.00</h1>
+            <p>Boost your wallet and increase your chances of winning big.<br>Choose an amount to deposit:</p>
+            <div class="deposit-buttons">
+                <button class="deposit">$1</button>
+                <button class="deposit">$10</button>
+                <button class="deposit">$100</button>
+                <button class="deposit">$1000</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Moved Above About Us Section -->
+<div class="grid">
+    <div class="footer-card light-box">
+        <h3>01</h3>
+        <h4>Register</h4>
+        <p>Download our app and create your account in minutes.</p>
+        <a href="#">Learn More</a>
+    </div>
+    <div class="footer-card light-box">
+        <h3>02</h3>
+        <h4>Get Ready</h4>
+        <p>Make your first deposit and prepare for an exciting journey.</p>
+        <a href="#">Learn More</a>
+    </div>
+    <div class="footer-card light-box">
+        <h3>03</h3>
+        <h4>Enjoy</h4>
+        <p>Place your bets, play your favorite games, and win big!</p>
+        <a href="#">Learn More</a>
+    </div>
+</div>
+
+<!-- About Us Section -->
+<div class="about-section">
+    <h2>About Us</h2>
+    <p>Infinity Money is not just another online casino – we're a revolution in the world of digital gambling. Founded by a team of industry veterans and tech innovators, we set out to create an unparalleled gaming experience that combines cutting-edge technology with classic casino thrills.</p>
+    <p>Our mission is to provide a safe, fair, and exciting platform where players from all walks of life can enjoy premium casino games, sports betting, and more. We leverage blockchain technology to ensure transparency and security in all transactions.</p>
+    
+    <!-- Values Section -->
+    <div class="values-box light-box">
+        <h3>Our Values</h3>
+        <ul>
+            <li>Integrity in all our operations</li>
+            <li>Innovation in gaming technology</li>
+            <li>Commitment to responsible gaming</li>
+            <li>Exceptional customer experience</li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    /* Wallet Section Styles */
+    .wallet-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .wallet-circle {
+        flex: 1;
+        text-align: center;
+    }
+
+    .circle {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #5A9D40, #33838B);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .dollar-sign {
+        font-size: 60px;
+        color: #a4ed59;
+    }
+
+    .wallet-info {
+        flex: 1;
+        text-align: left;
+        padding-left: 50px;
+    }
+
+    .wallet-info h2 {
+        color: #a4ed59;
+        font-size: 24px;
+    }
+
+    .wallet-info h1 {
+        color: #a4ed59;
+        font-size: 48px;
+    }
+
+    .wallet-info p {
+        color: #b0c7d6;
+    }
+
+    .deposit-buttons button {
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #a4ed59;
+        color: #0d0e25;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .deposit-buttons button:hover {
+        opacity: 0.8;
+    }
+
+    /* Footer Section */
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    .footer-card {
+        width: 30%;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .footer-card h3 {
+        color: #a4ed59;
+        font-size: 36px;
+    }
+
+    .footer-card h4 {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .footer-card p {
+        color: #b0c7d6;
+    }
+
+    .footer-card a {
+        color: #a4ed59;
+        text-decoration: none;
+    }
+
+    .footer-card a:hover {
+        color: #8fd449;
+    }
+
+    /* Lighten Footer and Values Box */
+    .light-box {
+        background-color: #293047;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .about-section h2 {
+        color: #a4ed59;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about-section p {
+        color: #b0c7d6;
+        margin-bottom: 20px;
+    }
+
+    .values-box {
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        color: #b0c7d6;
+        text-align: left;
+    }
+
+    .values-box ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .values-box ul li {
+        margin-bottom: 10px;
+        color: #a4ed59;
+        font-weight: bold;
+    }
+</style>
+
+{% endblock %}
